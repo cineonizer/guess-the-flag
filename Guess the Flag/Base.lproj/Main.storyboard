@@ -16,31 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw5-Af-atR">
+                                <rect key="frame" x="95" y="582" width="224" height="114"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfl-EC-IUx">
+                                <rect key="frame" x="95" y="418" width="224" height="114"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="france"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBS-nj-4St">
-                                <rect key="frame" x="95" y="100" width="224" height="114"/>
+                                <rect key="frame" x="95" y="254" width="224" height="114"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tw5-Af-atR">
-                                <rect key="frame" x="95" y="360" width="224" height="114"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfl-EC-IUx">
-                                <rect key="frame" x="95" y="230" width="224" height="114"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <buttonConfiguration key="configuration" style="plain" image="germany"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fBS-nj-4St" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6kS-RR-hh0"/>
-                            <constraint firstItem="tw5-Af-atR" firstAttribute="top" secondItem="yfl-EC-IUx" secondAttribute="bottom" constant="30" id="9QP-iX-UJp"/>
-                            <constraint firstItem="fBS-nj-4St" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="fZd-3H-otW"/>
-                            <constraint firstItem="yfl-EC-IUx" firstAttribute="top" secondItem="fBS-nj-4St" secondAttribute="bottom" constant="30" id="jdv-18-D2p"/>
-                            <constraint firstItem="yfl-EC-IUx" firstAttribute="centerX" secondItem="fBS-nj-4St" secondAttribute="centerX" id="kqf-9M-UAZ"/>
-                            <constraint firstItem="tw5-Af-atR" firstAttribute="centerX" secondItem="yfl-EC-IUx" secondAttribute="centerX" id="zna-c8-G8d"/>
+                            <constraint firstItem="tw5-Af-atR" firstAttribute="top" secondItem="yfl-EC-IUx" secondAttribute="bottom" constant="50" id="1J7-WK-zoP"/>
+                            <constraint firstItem="yfl-EC-IUx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9oz-tR-cel"/>
+                            <constraint firstItem="yfl-EC-IUx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="JH3-og-lxB"/>
+                            <constraint firstItem="fBS-nj-4St" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Jvt-gs-Hi0"/>
+                            <constraint firstItem="yfl-EC-IUx" firstAttribute="top" secondItem="fBS-nj-4St" secondAttribute="bottom" constant="50" id="Mvh-Or-FTL"/>
+                            <constraint firstItem="tw5-Af-atR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rWX-vf-Mdt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UOw-Kc-H08"/>
@@ -74,6 +74,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="france" width="200" height="100"/>
+        <image name="germany" width="200" height="100"/>
         <image name="us" width="200" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
