@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     return [button1, button2, button3]
   }
 
+  var correctFlagIdx = 0
   var score = 0
   var countries = [
     "estonia",
@@ -39,7 +40,7 @@ class ViewController: UIViewController {
     title = "Guess the Country's Flag"
   }
 
-  func displayRandomFlags() {
+  func displayRandomFlags(_: UIAlertAction? = nil) {
     countries.shuffle()
     for (idx, button) in buttons.enumerated() {
       button.setImage(UIImage(named: countries[idx]), for: .normal)
@@ -47,8 +48,22 @@ class ViewController: UIViewController {
       button.layer.borderColor = UIColor.lightGray.cgColor
       button.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
     }
-    let countryName = countries[Int.random(in: 0 ... 2)].uppercased()
-    flagLabel.text = countryName
+    correctFlagIdx = Int.random(in: 0 ... 2)
+    flagLabel.text = countries[correctFlagIdx].uppercased()
     flagLabel.font = UIFont.boldSystemFont(ofSize: 35)
+  }
+
+  @IBAction func buttonTapped(_ sender: UIButton) {
+    var title: String
+    if sender.tag == correctFlagIdx {
+      title = "Correct"
+      score += 1
+    } else {
+      title = "Wrong"
+      score -= 1
+    }
+    let alert = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: displayRandomFlags))
+    present(alert, animated: true, completion: nil)
   }
 }
