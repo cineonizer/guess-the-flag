@@ -46,6 +46,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SCORE: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9c-25-mwu">
+                                <rect key="frame" x="186" y="202" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -56,8 +62,10 @@
                             <constraint firstItem="fBS-nj-4St" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Jvt-gs-Hi0"/>
                             <constraint firstItem="6bw-wh-NaJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="Mhn-3A-dtp"/>
                             <constraint firstItem="yfl-EC-IUx" firstAttribute="top" secondItem="fBS-nj-4St" secondAttribute="bottom" constant="50" id="Mvh-Or-FTL"/>
+                            <constraint firstItem="n9c-25-mwu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XHh-JG-gXY"/>
                             <constraint firstItem="6bw-wh-NaJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aSr-IY-2tX"/>
                             <constraint firstItem="tw5-Af-atR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rWX-vf-Mdt"/>
+                            <constraint firstItem="n9c-25-mwu" firstAttribute="top" secondItem="6bw-wh-NaJ" secondAttribute="bottom" constant="30" id="xEN-iC-bpz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UOw-Kc-H08"/>
@@ -66,6 +74,7 @@
                         <outlet property="button2" destination="yfl-EC-IUx" id="rHp-7O-jLD"/>
                         <outlet property="button3" destination="tw5-Af-atR" id="ofr-4i-KUp"/>
                         <outlet property="flagLabel" destination="6bw-wh-NaJ" id="EtX-gf-QmO"/>
+                        <outlet property="scoreLabel" destination="n9c-25-mwu" id="0Wv-Ek-YrE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

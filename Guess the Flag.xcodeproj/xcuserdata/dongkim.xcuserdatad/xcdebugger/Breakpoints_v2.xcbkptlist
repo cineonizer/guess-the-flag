@@ -14,9 +14,9 @@
             filePath = "Guess the Flag/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "displayRandomFlags()"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "displayRandomFlags(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -12,12 +12,13 @@ class ViewController: UIViewController {
   @IBOutlet var button2: UIButton!
   @IBOutlet var button3: UIButton!
   @IBOutlet var flagLabel: UILabel!
+  @IBOutlet var scoreLabel: UILabel!
 
   var buttons: [UIButton] {
     return [button1, button2, button3]
   }
 
-  var correctFlagIdx = 0
+  var correctFlag: String?
   var score = 0
   var countries = [
     "estonia",
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     displayRandomFlags()
     title = "Guess the Country's Flag"
+    scoreLabel.font = UIFont.systemFont(ofSize: 25)
   }
 
   func displayRandomFlags(_: UIAlertAction? = nil) {
@@ -48,22 +50,28 @@ class ViewController: UIViewController {
       button.layer.borderColor = UIColor.lightGray.cgColor
       button.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
     }
-    correctFlagIdx = Int.random(in: 0 ... 2)
-    flagLabel.text = countries[correctFlagIdx].uppercased()
+    correctFlag = countries[Int.random(in: 0 ... 2)]
+    flagLabel.text = correctFlag?.uppercased()
     flagLabel.font = UIFont.boldSystemFont(ofSize: 35)
   }
 
   @IBAction func buttonTapped(_ sender: UIButton) {
     var title: String
-    if sender.tag == correctFlagIdx {
-      title = "Correct"
+    let selectedFlag = countries[sender.tag]
+    // set the variables to correct score and string display
+    if selectedFlag == correctFlag {
+      title = "Correct!"
       score += 1
     } else {
-      title = "Wrong"
-      score -= 1
+      title = """
+        "Wrong. You selected the flag for \(selectedFlag.count < 3 ? selectedFlag.uppercased() : selectedFlag.capitalized).
+      """
     }
+    // display the score and alert
+    scoreLabel.text = "SCORE: \(score)"
     let alert = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: displayRandomFlags))
     present(alert, animated: true, completion: nil)
   }
+  //
 }
